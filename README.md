@@ -28,3 +28,7 @@ and the guide [here](https://snntoolbox.readthedocs.io/en/latest/guide/installat
 ## Notes
 
 This framework was developed targeting the SpiNN-5 version of the SpiNNaker architecture. For more information, please refer to the website of the University of Manchester [here](http://apt.cs.manchester.ac.uk/projects/SpiNNaker/) and the corresponding publications.
+
+## Aknowledgement
+
+Do we add anything for the center ?
