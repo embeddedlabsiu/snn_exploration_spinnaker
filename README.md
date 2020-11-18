@@ -1,7 +1,7 @@
-## Spiking Neural Network (SNN) Exploration on Neuromorphic Hardware (SpiNNaker)
+# Spiking Neural Network (SNN) Exploration on Neuromorphic Hardware (SpiNNaker)
 Exploration of hardware dependent parameters on SpiNNaker 
 
-# Disclaimer
+## Disclaimer
 
 This work is based on the SNN conversion toolbox (SNN-TB) that transforms a rate-based
 artificialgiven neural network that is decribed in a common deep-learning framework (Keras/TF and others) into the equivalent spiking representation
@@ -11,3 +11,6 @@ Please refer to the [documentation](http://snntoolbox.readthedocs.io) and the [r
 [Rueckauer et al., 2017](https://www.frontiersin.org/articles/10.3389/fnins.2017.00682/abstract)
 and [Rueckauer and Liu, 2018](https://ieeexplore.ieee.org/abstract/document/8351295/).
 
+## Prerequisites
+
+To install the snn-tb please refer to the installation instructions in the github [repository](https://github.com/NeuromorphicProcessorProject/snn_toolbox).
