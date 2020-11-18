@@ -1,7 +1,14 @@
 # Spiking Neural Network (SNN) Exploration on Neuromorphic Hardware (SpiNNaker)
 This tool extends the SNN conversion toolbox (SNN-TB) and performs efficient exploration of the hardware dependent parameters of the SpiNNaker neuromorphic
 platform. The goal is to achieve the highest possible accuracy on the SpiNNaker board for a given SNN architecture.
-The overview of our framework is show ![here](snn_exploration_overview.png)
+The overview of our framework is shown below: ![here](snn_exploration_overview.png)
+
+Our framework executes the following steps:
+
+- Step 1: Trains the original Convolutional Neural Network (CNN) and converts it to SNN using the SNN-TB.
+- Step 2: Performs design space explorationof platform configurations that affect accuracy on the SpiNNaker neuromorphic board, such as 
+neurons per core, spiking input rate, and time scale. It applies a heuristic method to prune the design space and selects the candidate configurations.
+- Step 3: Evaluates the candidate solutions on the SpiNNaker and decides the configuration that optimizes the prediction accuracy of the deployed SNN.
 
 ## Disclaimer
 
