@@ -14,4 +14,4 @@ and [Rueckauer and Liu, 2018](https://ieeexplore.ieee.org/abstract/document/8351
 ## Prerequisites
 
 To install the SNN-TB please refer to the installation instructions in the github [repository](https://github.com/NeuromorphicProcessorProject/snn_toolbox)
-and the instalation guide [here](https://snntoolbox.readthedocs.io/en/latest/guide/installation.html).
+and the guide [here](https://snntoolbox.readthedocs.io/en/latest/guide/installation.html).
