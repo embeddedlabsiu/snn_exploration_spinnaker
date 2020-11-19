@@ -29,39 +29,17 @@ parser.add_argument("width", help="kernels used")
 args = parser.parse_args()
 
 X_train, Y_train, X_test, Y_test, NUM_CLASSES, IMG_SIZE, INPUT_SIZE = LISA_data(int(args.image_size))
-# create segments for LISA dataset: call LISA_data_segment() and uncomment exit() at line 51 below!
-# X_train, Y_train, X_test, Y_test, NUM_CLASSES, IMG_SIZE, INPUT_SIZE = LISA_data_segment(int(args.image_size))
-
-# X_train, Y_train, X_test, Y_test, NUM_CLASSES, IMG_SIZE, INPUT_SIZE = GTSRB_grayscale_data(int(args.image_size))
-# X_train, Y_train, X_test, Y_test, NUM_CLASSES, IMG_SIZE, INPUT_SIZE = mnist_data()
-# X_train, Y_train, X_test, Y_test, NUM_CLASSES, IMG_SIZE, INPUT_SIZE = cifar10_data(int(args.image_size))
-
-#X_train_pickle = open("X_train.p", "wb")
-#pickle.dump(X_train, X_train_pickle)
-#
-#Y_train_pickle = open("Y_train.p", "wb")
-#pickle.dump(Y_train, Y_train_pickle)
-#
-#X_test_pickle = open("X_test.p", "wb")
-#pickle.dump(X_test, X_test_pickle)
-#
-#Y_test_pickle = open("Y_test.p", "wb")
-#pickle.dump(Y_test, Y_test_pickle)
-#
-# exit()
 
 batch_size = 32
-epochs = 5
+epochs = 100
 
 # Lenet-5 CNN architecture
 model = Sequential()
 
 for s in range(1, (int(args.stages)+1)):
     for d in range(1, (int(args.depth)+1)):
-      # print(s, d, int(args.width)*pow(2, s-1))
         model.add(Conv2D(int(args.width)*pow(2, s-1), use_bias=False, kernel_size=(5, 5), activation='relu', input_shape=INPUT_SIZE))
     model.add(MaxPooling2D(pool_size=(2, 2)))
-# model.add(MaxPooling2D(pool_size=(2, 2)))
 
 model.add(Flatten())
 model.add(Dropout(0.3))
@@ -74,7 +52,6 @@ model.summary()
 lr = 0.01
 sgd = SGD(lr=lr, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy',
-              # optimizer=SGD(),
               optimizer=Adadelta(),
               metrics=['accuracy'])
 
@@ -91,8 +68,6 @@ model.fit(X_train, Y_train,
           callbacks=[ModelCheckpoint('LISA_cnn.h5', save_best_only=True)])
 
 score = model.evaluate(X_test, Y_test, verbose=0)
-
-# model.save('LISA_cnn.h5')
 
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
