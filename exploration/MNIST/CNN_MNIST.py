@@ -28,7 +28,8 @@ parser.add_argument("depth", help="number of building blocks per stage")
 parser.add_argument("width", help="kernels used")
 args = parser.parse_args()
 
-X_train, Y_train, X_test, Y_test, NUM_CLASSES, IMG_SIZE, INPUT_SIZE = LISA_data(int(args.image_size))
+X_train, Y_train, X_test, Y_test, NUM_CLASSES, IMG_SIZE, INPUT_SIZE = mnist_data_image_size(int(args.image_size))
+
 
 batch_size = 32
 epochs = 100
@@ -51,6 +52,7 @@ model.summary()
 lr = 0.01
 sgd = SGD(lr=lr, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy',
+              # optimizer=SGD(),
               optimizer=Adadelta(),
               metrics=['accuracy'])
 
@@ -64,9 +66,11 @@ model.fit(X_train, Y_train,
           epochs=epochs,
           verbose=2,
           validation_data=(X_test, Y_test),
-          callbacks=[ModelCheckpoint('LISA_cnn.h5', save_best_only=True)])
+          callbacks=[ModelCheckpoint('MNIST_cnn.h5', save_best_only=True)])
 
 score = model.evaluate(X_test, Y_test, verbose=0)
+
+# model.save('LISA_cnn.h5')
 
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])

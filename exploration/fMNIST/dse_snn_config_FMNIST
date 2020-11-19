@@ -1,0 +1,21 @@
+[paths]
+dataset_path = %(path_wd)s/dataset
+filename_ann = FMNIST_cnn
+
+[tools]
+evaluate_ann = True
+
+[simulation]
+simulator = spinnaker
+duration = 100
+num_to_test = 20
+batch_size = 1 
+keras_backend = tensorflow
+
+[input]
+poisson_input = True
+
+[output]
+#log_vars = {'all'}
+#plot_vars = {'correlation'}
+#plotproperties = {'font.size': 8}
