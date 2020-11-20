@@ -23,13 +23,17 @@ and [Rueckauer and Liu, 2018](https://ieeexplore.ieee.org/abstract/document/8351
 ## Prerequisites
 
 To install the SNN-TB please refer to the installation instructions in the github [repository](https://github.com/NeuromorphicProcessorProject/snn_toolbox)
-and the guide [here](https://snntoolbox.readthedocs.io/en/latest/guide/installation.html).
+and the guide [here](https://snntoolbox.readthedocs.io/en/latest/guide/installation.html). Also, this framework requires common deep learning frameworks, such as Keras with Tensorflow backend.
 
 ## Notes
 
 This framework was developed targeting the SpiNN-5 version of the SpiNNaker architecture. For more information, please refer to the website of the University of Manchester [here](http://apt.cs.manchester.ac.uk/projects/SpiNNaker/) and the corresponding publications.
 Regarding the source code of the SNN-TB, we utilized the version that corresponds to commit 75afe2f868bbd14c5fcf74f86171da39850e8251.
 
-## Aknowledgement
+## Usage 
+An example usage of the exploration framework is shown below.
+```bash
+./dse_snn_config_MNIST_segment_args.sh","2","1","32","1","1300"
+```
+In this case, we are performing exploration for the network S(2, 1, 32), with time scale = 1 and spike rate = 1300.
 
-Do we add anything for the center ?
