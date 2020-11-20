@@ -31,9 +31,29 @@ This framework was developed targeting the SpiNN-5 version of the SpiNNaker arch
 Regarding the source code of the SNN-TB, we utilized the version that corresponds to commit 75afe2f868bbd14c5fcf74f86171da39850e8251.
 
 ## Usage 
-An example usage of the exploration framework is shown below.
+An example usage of the exploration framework is shown below using the MNIST dataset as an example.
+- To extract the similarity graphs, run the following script:
+```bash
+./MNIST_cnn_snn_exploration.sh
+```
+Inside that script the user can define the image size, number of stages, width and depth of the SNN. 
+
+In order to select the target of the experiment, the user can modify the dse_snn_config file:
+```bash
+[simulation]
+simulator = spinnaker
+```
+to perform the experiment on the SpiNNaker machine, or 
+```bash
+[simulation]
+simulator = INIsim
+```
+to utilize the INIsim CPU simulator (from SNN-TB). Please refer to the SNN-TB documentation for more information.
+
+After the exploration stage, the user can select the candidate configurations and perform full inference on the SpiNNaker, as follows:
 ```bash
 ./dse_snn_config_MNIST_segment_args.sh","2","1","32","1","1300"
 ```
-In this case, we are performing exploration for the network S(2, 1, 32), with time scale = 1 and spike rate = 1300.
+In this case, we are performing inference for the network S(2, 1, 32), with time scale = 1 and spike rate = 1300. 
+The neurons per core value is selected based on the analysis of the previous step. 
 
