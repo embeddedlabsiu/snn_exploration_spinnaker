@@ -48,7 +48,7 @@ to perform the experiment on the SpiNNaker machine, or
 [simulation]
 simulator = INIsim
 ```
-to utilize the INIsim CPU simulator (from SNN-TB).
+to utilize the INIsim CPU simulator (from SNN-TB). Please refer to the SNN-TB documentation for more information.
 
 
 ```bash
