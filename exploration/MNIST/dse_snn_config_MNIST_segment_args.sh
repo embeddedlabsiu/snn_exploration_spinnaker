@@ -21,7 +21,7 @@ do
 
 		for spike_rate in $input_spike_rate
 		do
-			sed -i "231s/.*/            spiketrains = list(rates*$spike_rate) #It was 500 IRAKLIS/" /home/ces10/snn_toolbox/snntoolbox/simulation/target_simulators/spinnaker_target_sim.py
+			sed -i "231s/.*/            spiketrains = list(rates*$spike_rate) " /home/ces10/snn_toolbox/snntoolbox/simulation/target_simulators/spinnaker_target_sim.py
 			cd /home/ces10/snn_toolbox
 			pip install .
 			cd -

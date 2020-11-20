@@ -34,8 +34,8 @@ do
 			sed -i "231s/.*/            nspiketrains = list(rates*$spike_rate) # /" /home/ces10/snn_toolbox/snntoolbox/simulation/target_simulators/spinnaker_target_sim.py
 			for npc in $neurons_per_core
 			do	
-				sed -i "93s/.*/        self.sim.set_number_of_neurons_per_core(self.sim.SpikeSourcePoisson, $neurons_per_core) # limit number of neurons per core for input spike source DEFAULT 100 IRAKLIS/" /home/ces10/snn_toolbox/snntoolbox/simulation/target_simulators/spinnaker_target_sim.py
-				sed -i "108s/.*/        self.sim.set_number_of_neurons_per_core(self.sim.SpikeSourcePoisson, $neurons_per_core) # limit number of neurons per core for input spike source DEFAULT 100 IRAKLIS/" /home/ces10/snn_toolbox/snntoolbox/simulation/target_simulators/spinnaker_target_sim.py
+				sed -i "93s/.*/        self.sim.set_number_of_neurons_per_core(self.sim.SpikeSourcePoisson, $neurons_per_core) " /home/ces10/snn_toolbox/snntoolbox/simulation/target_simulators/spinnaker_target_sim.py
+				sed -i "108s/.*/        self.sim.set_number_of_neurons_per_core(self.sim.SpikeSourcePoisson, $neurons_per_core) " /home/ces10/snn_toolbox/snntoolbox/simulation/target_simulators/spinnaker_target_sim.py
 				
 				cd /home/ces10/snn_toolbox
 				pip install .

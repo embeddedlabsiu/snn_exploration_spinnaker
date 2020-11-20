@@ -44,7 +44,6 @@ do
 				cp dse_snn_config_MNIST $experiment_folder/$size/$dir/dse_snn_config
 				cp snn_DSE.sh $experiment_folder/$size/$dir/
 				cd $experiment_folder/$size/$dir/
-				# snntoolbox -t dse_snn_config > snn_report_MNIST.txt
 				./snn_DSE.sh
 				cd ../
 			done

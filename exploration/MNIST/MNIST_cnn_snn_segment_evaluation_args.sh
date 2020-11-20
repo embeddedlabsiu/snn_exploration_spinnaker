@@ -8,7 +8,7 @@ width=$3
 
 # absolute paths of the experiment -> avoid path errors 
 project_dir="/home/"
-experiment_folder=$project_dir/"MNIST_results_Giannis"
+experiment_folder=$project_dir/"MNIST_results"
 
 if [ ! -d "$experiment_folder" ]; then
 	mkdir $experiment_folder
