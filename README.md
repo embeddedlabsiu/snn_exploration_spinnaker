@@ -50,9 +50,10 @@ simulator = INIsim
 ```
 to utilize the INIsim CPU simulator (from SNN-TB). Please refer to the SNN-TB documentation for more information.
 
-
+After the exploration stage, the user can select the candidate configurations and perform full inference on the SpiNNaker, as follows:
 ```bash
 ./dse_snn_config_MNIST_segment_args.sh","2","1","32","1","1300"
 ```
-In this case, we are performing exploration for the network S(2, 1, 32), with time scale = 1 and spike rate = 1300.
+In this case, we are performing inference for the network S(2, 1, 32), with time scale = 1 and spike rate = 1300. 
+The neurons per core value is selected based on the analysis of the previous step. 
 
