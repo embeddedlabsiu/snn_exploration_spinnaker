@@ -30,6 +30,6 @@ and the guide [here](https://snntoolbox.readthedocs.io/en/latest/guide/installat
 This framework was developed targeting the SpiNN-5 version of the SpiNNaker architecture. For more information, please refer to the website of the University of Manchester [here](http://apt.cs.manchester.ac.uk/projects/SpiNNaker/) and the corresponding publications.
 Regarding the source code of the SNN-TB, we utilized the version that corresponds to commit 75afe2f868bbd14c5fcf74f86171da39850e8251.
 
-## Aknowledgement
+## Usage 
 
-Do we add anything for the center ?
+
