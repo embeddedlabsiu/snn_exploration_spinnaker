@@ -53,8 +53,7 @@ do
 				cp snn_DSE.sh $experiment_folder/$size/$dir/
 				cd $experiment_folder/$size/$dir/
 				
-				snntoolbox -t dse_snn_config > snn_report_FMNIST.txt
-				# ./snn_DSE.sh
+				./snn_DSE.sh
 				cd ../
 			done
 		done
