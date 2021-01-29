@@ -1,6 +1,19 @@
 # Spiking Neural Network (SNN) Exploration on Neuromorphic Hardware (SpiNNaker)
 This tool extends the SNN conversion toolbox (SNN-TB) and performs efficient exploration of the hardware dependent parameters of the SpiNNaker neuromorphic
 platform. The goal is to achieve the highest possible accuracy on the SpiNNaker board for a given SNN architecture.
+
+If you use it, please consider referencing our paper:
+[**Efficient Deployment of Spiking Neural Networks on SpiNNaker Neuromorphic Platform**](https://ieeexplore.ieee.org/document/9309092)
+```
+@article{galanis2020efficient,
+  title={Efficient Deployment of Spiking Neural Networks on SpiNNaker Neuromorphic Platform},
+  author={Galanis, Ioannis and Anagnostopoulos, Iraklis and Nguyen, Chinh and Bares, Guillermo},
+  journal={IEEE Transactions on Circuits and Systems II: Express Briefs},
+  year={2020},
+  publisher={IEEE}
+}
+```
+
 The overview of our framework is shown below: ![here](snn_exploration_overview.png)
 
 Our framework executes the following steps:
